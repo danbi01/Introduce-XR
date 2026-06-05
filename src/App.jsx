@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Concept from './pages/Concept';
 import Viewer3D from './pages/Viewer3D';
 import AppShowcase from './pages/AppShowcase';
+import News from './pages/News';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/concept" element={<Concept />} />
         <Route path="/viewer" element={<Viewer3D />} />
         <Route path="/showcase" element={<AppShowcase />} />
+        <Route path='/news' element={<News />} />
       </Routes>
     </Router>
   );

@@ -12,7 +12,7 @@ function Navbar() {
         Extended Reality
       </Link>
       <div style={{ display: 'flex', gap: '40px' }}>
-        <Link to="/concept" style={{ color: '#4b5563', textDecoration: 'none', fontWeight: '600', fontSize: '15px' }}>XR 최신 뉴스</Link>
+        <Link to="/news" style={{ color: '#4b5563', textDecoration: 'none', fontWeight: '600', fontSize: '15px' }}>XR 최신 뉴스</Link>
         <Link to="/showcase" style={{ color: '#4b5563', textDecoration: 'none', fontWeight: '600', fontSize: '15px' }}>앱 및 게임</Link>
       </div>
     </nav>

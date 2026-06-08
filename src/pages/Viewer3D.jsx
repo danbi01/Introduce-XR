@@ -69,6 +69,7 @@ function Viewer3D() {
               padding: '15px 40px',
               backgroundColor: '#1e3a8a',
               color: 'white',
+              border: 'none',
               borderRadius: '30px',
               fontWeight: 'bold',
               cursor: 'pointer'

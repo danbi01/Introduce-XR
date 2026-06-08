@@ -6,6 +6,7 @@ import Concept from './pages/Concept';
 import Viewer3D from './pages/Viewer3D';
 import AppShowcase from './pages/AppShowcase';
 import News from './pages/News';
+import "./App.css"
 
 function App() {
   return (

@@ -1,38 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 function News() {
-    const styles = {
-        bg: {
-            margin: "0 auto",
-            width: "80%"
-        },
-        ul: {
-            backgroundColor: "#f7f7f7",
-            borderRadius: 40,
-            listStyle: "none",
-        },
-        newsItem: {
-            // last-child
-            borderBottom: "1px solid black",
-            width: "90%"
-        },
-        li: {
-            textAlign: "left",
-            padding: "10px 0"
-        },
-        title: {
-            fontSize: 18,
-        },
-        description: {
-            textAlign: "left",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-        }
-    }
-
     const [news, setNews] = useState([]);
     const searchNews = async () => {
         try {
@@ -51,19 +19,25 @@ function News() {
             console.error(err);
         }
     };
+    
+    function decodeHTML(data) {
+        const textarea = document.createElement("textarea");
+        textarea.innerHTML = data;
+        return textarea.value;
+    }
 
     useEffect(() => {
         searchNews();
     }, []);
 
     return (
-        <div style={styles.bg}>
-            <ul style={styles.ul}>
+        <div className="bg">
+            <ul>
                 {news.map((item, index) => (
-                    <div style={styles.newsItem}>
-                    <li key={index} style={styles.li}>
-                        <a target="_blank" href={item.link} style={styles.title}>{item.title}</a>
-                        <p style={styles.description}>{item.description}</p>
+                    <div className="newsItem" key={index}>
+                    <li>
+                        <a target="_blank" href={item.link} ><p className="title">{decodeHTML(item.title)}</p>
+                        <p className="description" dangerouslySetInnerHTML={{ __html: item.description }} /></a>
                     </li></div>
                 ))}
             </ul>

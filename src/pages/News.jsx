@@ -2,13 +2,28 @@ import React, { useState, useEffect } from "react";
 
 function News() {
     const styles = {
+        bg: {
+            margin: "0 auto",
+            width: "80%"
+        },
         ul: {
             backgroundColor: "#f7f7f7",
             borderRadius: 40,
             listStyle: "none",
         },
+        newsItem: {
+            // last-child
+            borderBottom: "1px solid black",
+            width: "90%"
+        },
+        li: {
+            textAlign: "left",
+            padding: "10px 0"
+        },
+        title: {
+            fontSize: 18,
+        },
         description: {
-            width: 1000,
             textAlign: "left",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -42,13 +57,14 @@ function News() {
     }, []);
 
     return (
-        <div>
+        <div style={styles.bg}>
             <ul style={styles.ul}>
                 {news.map((item, index) => (
-                    <li key={index}>
-                        <a href={item.link}>{item.title}</a>
+                    <div style={styles.newsItem}>
+                    <li key={index} style={styles.li}>
+                        <a target="_blank" href={item.link} style={styles.title}>{item.title}</a>
                         <p style={styles.description}>{item.description}</p>
-                    </li>
+                    </li></div>
                 ))}
             </ul>
         </div>

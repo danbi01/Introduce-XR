@@ -70,7 +70,7 @@ function Home() {
   
   
   <img 
-    src="/xr.png" alt="XR 기술 소개" 
+    src="/xr.PNG" alt="XR 기술 소개" 
     style={{ 
       width: '100%',      
       height: 'auto',   

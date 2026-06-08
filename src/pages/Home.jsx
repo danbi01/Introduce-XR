@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
-//애니메이션
+//3D 큐브
 function HologramCube() {
   const cubeRef = useRef();
 
@@ -31,12 +31,12 @@ function Home() {
     <div style={{ backgroundColor: '#0f0f1a', color: 'white', minHeight: 'calc(100vh - 74px)', fontFamily: 'Arial' }}>
       <div style={{ padding: '60px 20px', textAlign: 'center' }}>
         
-        <h1 style={{ fontSize: '48px', color: '#f3f3f3', marginBottom: '20px' }}>XR 확장현실을 만나보세요</h1>
+        <h1 style={{ fontSize: '48px', color: '#f3f3f3', fontWeight: '550', marginBottom: '20px' }}>XR 확장현실을 만나보세요</h1>
         <p style={{ fontSize: '22px', color: '#f3f3f3', marginBottom: '40px' }}>
-          XR 기술을 쉽게 이해하고 메타퀘스트 기기를 3D로 체험해봅시다.
+          XR 기술에 대해 알아보고, 메타퀘스트 기기를 3D로 체험해봅시다.
         </p>
 
-        {/* 3D 캔버스 영역 */}
+
         <div style={{ width: '100%', height: '350px', marginBottom: '40px', cursor: 'grab' }}>
           <Canvas camera={{ position: [0, 0, 5] }}>
             <ambientLight intensity={1} />
@@ -63,15 +63,14 @@ function Home() {
 
       <div style={{ backgroundColor: '#f5f5f7', color: '#1d1d1f', padding: '80px 20px', textAlign: 'center' }}>
         <h2 style={{ fontSize: '56px', fontWeight: '600', marginBottom: '10px' }}>Extended Reality</h2>
-        <p style={{ fontSize: '24px', color: '#1d1d1f', marginBottom: '30px' }}>최신 기술 XR를 만나보세요.</p>
+        <p style={{ fontSize: '24px', color: '#1d1d1f', marginBottom: '30px' }}>지금껏 본 적 없는 새로운 경험, XR의 세계에 초대합니다!</p>
         
         
         <div style={{ textAlign: 'center', backgroundColor: '#0f0f1a' }}>
   
   
   <img 
-    src="/xr.png" 
-    alt="XR 기술 소개" 
+    src="/xr.png" alt="XR 기술 소개" 
     style={{ 
       width: '100%',      
       height: 'auto',   
@@ -92,8 +91,8 @@ function Home() {
   borderTop: '1px solid #333'
 }}>
   <div style={{ marginBottom: '10px' }}>
-    <p>배화여자대학교 컴퓨터공학과</p>
-    <p>으아아앙오오</p>
+    <p>배화여자대학교 웹개발실무 과제</p>
+    <p>제작: 이은솔, 백단비</p>
   </div>
   <p>© 2026 Introduce-XR. All rights reserved.</p>
 </footer>

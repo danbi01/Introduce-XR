@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
 function Concept() {
-
   const [activeTab, setActiveTab] = useState('XR이란?');
-
 
   const conceptData = {
     'XR이란?': [
@@ -24,54 +22,31 @@ function Concept() {
   };
 
   return (
-    <div className="bg" style={{ padding: '60px 20px', maxWidth: '1000px', height: '100%', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
-      
-
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginBottom: '40px' }}>
-        
-
+    <div className="bg_concept">
+      <div className="tab-buttons">
         {Object.keys(conceptData).map((tab) => (
-          <button 
-            key={tab} 
-            onClick={() => setActiveTab(tab)} 
-            style={{ 
-              padding: '15px 40px', borderRadius: '40px', cursor: 'pointer', fontWeight: 'bold', fontSize: '18px', border: 'none',
-              
-              backgroundColor: activeTab === tab ? '#7c85a3' : '#e2e4ea', 
-              color: activeTab === tab ? 'white' : '#ffffff',
-            }}>
-            {tab}
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`tab-button ${activeTab === tab ? 'active' : ''}`}>
+          {tab}
           </button>
         ))}
       </div>
-      
-      
-      <div style={{ display: 'flex', backgroundColor: '#f9f9f9', borderRadius: '30px', overflow: 'hidden', minHeight: '300px' }}>
-        
-        {/* 왼쪽 박스 */}
-        <div style={{ flex: '0 0 30%', backgroundColor: '#7c85a3', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-          
-          <h2 style={{ color: 'white', fontSize: '40px', fontWeight: 'bold', margin: 0, textAlign: 'center', wordBreak: 'keep-all' }}>
-            {activeTab}
-          </h2>
+      {/* 왼쪽 박스 */}
+      <div className="concept-box">
+        <div className="concept-left">
+          <h2>{activeTab}</h2>
         </div>
-
-        {/* 오른쪽 박스 */}
-        <div style={{ flex: '1', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '40px 50px' }}>
-          
-
+      {/* 오른쪽 박스 */}
+        <div className="concept-right">
           {conceptData[activeTab].map((text, index) => (
-
-            <div key={index} style={{ borderBottom: '1px dashed #7c85a3', padding: '25px 0' }}>
-            <p style={{ fontSize: '18px', color: '#111', fontWeight: '600', margin: 0, textAlign: 'center' }}>
-            {text}
-    </p>
-  </div>
-))}
-
+            <div key={index} className="concept-item">
+              <p>{text}</p>
+            </div>
+          ))}
         </div>
       </div>
-
     </div>
   );
 }

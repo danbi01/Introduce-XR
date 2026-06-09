@@ -185,21 +185,33 @@
 
 /* News.jsx */
 .bg {
-  margin: 20px auto 40px auto;
-  width: 80%;
+  margin: 40px  auto;
+  width: 90%;
   max-width: 1000px;
 }
 .bg h2 {
   text-align: left;
   font-size: 34px;
-  padding: 10px 0 20px 0;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .bg ul {
   border-radius: 40px;
-  background-color: #f7f7f7;
+  background-color: #f9f9f9;
   list-style: none;
   padding: 15px 0;
+}
+.bg .page {
+  margin: 10px 0;
+}
+.bg button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.bg b {
+  color: #000000;
 }
 .newsItem {
   border-bottom: 1px solid black;
@@ -226,6 +238,10 @@
   font-size: 18px;
   color: #181818;
   padding: 0 0 7px 0;
+  width: 573px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .description {
   text-align: left;
@@ -244,15 +260,11 @@
 
 .showcase-container {
   max-width: 1000px;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin: 40px auto;
   background-color: #ffffff;
   text-align: left;
-}
-
-.main-content {
-  padding: 40px;
 }
 
 .featured-apps {
@@ -279,7 +291,7 @@
 
 .app-desc {
   font-size: 15px;
-  color: #9ca3af;
+  color: #767b82;
   margin: 0 0 20px 0;
 }
 
@@ -385,6 +397,7 @@
   background-color: #f6f6f8;
   max-width: 1000px;
   width: 80%;
+  min-height: 300px;
   max-height: 500px;
   height: 50%;
   margin: 40px auto;
@@ -466,4 +479,214 @@
 
 .modal-price-btn:hover {
   background-color: #515975;
+}
+
+/* Concept.jsx */
+/* 전체 배경 컨테이너 */
+.bg_concept {
+  min-width: 740px;
+  max-width: 1000px;
+  width: 90%;
+  height: 100%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* 탭 버튼 영역 */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  padding: 15px 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  background-color: #e2e4ea;
+  color: #ffffff;
+}
+
+.tab-button.active {
+  background-color: #7c85a3;
+  color: white;
+}
+
+/* 메인 콘텐츠 박스 */
+.concept-box {
+  display: flex;
+  background-color: #f9f9f9;
+  border-radius: 30px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+/* 왼쪽 박스 */
+.concept-left {
+  flex: 0 0 30%;
+  background-color: #7c85a3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.concept-left h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* 오른쪽 박스 */
+.concept-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 50px;
+}
+
+.concept-item {
+  border-bottom: 1px dashed #7c85a3;
+  padding: 25px 0;
+}
+
+.concept-item p {
+  font-size: 18px;
+  color: #111;
+  margin: 0;
+  text-align: center;
+}
+
+/* Viewer3D */
+.viewer-container {
+  max-width: 1000px;
+  width: 80%;
+  height: 100%;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* 3D 영역 */
+.viewer-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.viewer-header h1 {
+  height: 100%;
+  font-size: 48px;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 10px;
+}
+
+.viewer-header h2 {
+  margin: 20px;
+}
+
+.viewer-canvas-box {
+  height: 600px;
+  background-color: #f1f5f9;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.buy-button {
+  margin-top: 30px;
+  padding: 15px 40px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 구매 영역 */
+.purchase-box {
+  display: flex;
+  gap: 40px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.purchase-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.purchase-main-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #f1f5f9;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.purchase-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.purchase-thumbs img {
+  width: 60px;
+  height: 60px;
+  background-color: #f1f5f9;
+  border-radius: 10px;
+}
+
+/* 오른쪽 박스 */
+.purchase-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.purchase-right h3 {
+  margin-bottom: 20px;
+}
+
+.model-option {
+  padding: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model-option.active {
+  border: 2px solid #1e3a8a;
+}
+
+.model-option span {
+  color: #64748b;
+}
+
+.purchase-btn {
+  padding: 16px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }

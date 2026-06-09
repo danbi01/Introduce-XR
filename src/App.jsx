@@ -6,6 +6,7 @@ import Concept from './pages/Concept';
 import Viewer3D from './pages/Viewer3D';
 import AppShowcase from './pages/AppShowcase';
 import News from './pages/News';
+import Footer from './components/Footer';
 import "./App.css"
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/showcase" element={<AppShowcase />} />
         <Route path='/news' element={<News />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -32,6 +32,7 @@ function News() {
 
     return (
         <div className="bg">
+            <h2>XR 최신 뉴스</h2>
             <ul>
                 {news.map((item, index) => (
                     <div className="newsItem" key={index}>

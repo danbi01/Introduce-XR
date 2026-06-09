@@ -24,7 +24,7 @@ function Concept() {
   };
 
   return (
-    <div style={{ padding: '60px 20px', maxWidth: '1000px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
+    <div className="bg" style={{ padding: '60px 20px', maxWidth: '1000px', height: '100%', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
       
 
       <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginBottom: '40px' }}>

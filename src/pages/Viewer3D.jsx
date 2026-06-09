@@ -24,11 +24,12 @@ function Viewer3D() {
   return (
     <div style={{
       padding: '60px 20px',
-      maxWidth: '900px',
-      margin: '0 auto',
+      maxWwidth: '1000px',
+      width: '80%',
+      height: '100%',
+      margin: '40px auto',
       fontFamily: 'Arial'
     }}>
-
 
       {/* 3D */}
       <div style={{
@@ -47,7 +48,6 @@ function Viewer3D() {
         <h2>기기를 클릭해서 움직여보세요</h2>
 
         <div style={{
-          width: '900px',
           height: '600px',
           backgroundColor: '#f1f5f9',
           borderRadius: '20px',

@@ -48,7 +48,7 @@ function News() {
             <ul>
                 {ShowNews()}
                 <div className="page">
-                    <button disabled={page==1&&true}onClick={() => setPage( page - 1 )}>&lt; 이전</button>
+                    <button disabled={page==1 && true} onClick={() => setPage( page - 1 )}>&lt; 이전</button>
                     &nbsp;&nbsp;<b>{page}</b>&nbsp;&nbsp;
                     <button onClick={() => setPage( page + 1 )}>다음 &gt;</button>
                     </div>

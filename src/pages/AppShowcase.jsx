@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 function AppShowcase() {
-  const [isModalOpen_beat, setisModalOpen_beat] = useState(false);
-  const [isModalOpen_youtube, setisModalOpen_youtube] = useState(false);
+  const [isModalOpen_beat, setIsModalOpen_beat] = useState(false);
+  const [isModalOpen_youtube, setIsModalOpen_youtube] = useState(false);
 
   const bottomApps = [
     { name: "VRChat", desc: "무한한 가능성의 공간을 상상해 보세요.", image: "/VRChat.webp" },
@@ -16,7 +16,7 @@ function AppShowcase() {
         <div className="main-content">
           <div className="featured-apps">
             
-            <div className="featured-app-card clickable-card" onClick={() => setisModalOpen_youtube(true)}>
+            <div className="featured-app-card clickable-card" onClick={() => setIsModalOpen_youtube(true)}>
               <h2 className="app-title">Youtube VR</h2>
               <p className="app-desc">전과 다른 YouTube 세상</p>
               <div className="image-container yt-placeholder">
@@ -25,7 +25,7 @@ function AppShowcase() {
             </div>
 
             <div 
-              className="featured-app-card clickable-card" onClick={() => setisModalOpen_beat(true)}
+              className="featured-app-card clickable-card" onClick={() => setIsModalOpen_beat(true)}
             >
               <h2 className="app-title">Beat Saber</h2>
               <p className="app-desc">리듬에 맞춰 비트를 베는 VR 게임</p>
@@ -52,7 +52,7 @@ function AppShowcase() {
       </div>
 
       {isModalOpen_beat && (
-        <div className="modal-overlay" onClick={() => setisModalOpen_beat(false)}>
+        <div className="modal-overlay" onClick={() => setIsModalOpen_beat(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-image-box">
               <img src="/beatSaber.webp" alt="Beat Saber" className="modal-image" />
@@ -60,7 +60,7 @@ function AppShowcase() {
             
             <div className="modal-info-box">
 
-              <button className="modal-close-btn" onClick={() => setisModalOpen_beat(false)}>
+              <button className="modal-close-btn" onClick={() => setIsModalOpen_beat(false)}>
                 ✕
               </button>
 
@@ -74,7 +74,7 @@ function AppShowcase() {
         </div>
       )}
       {isModalOpen_youtube && (
-        <div className="modal-overlay" onClick={() => setisModalOpen_youtube(false)}>
+        <div className="modal-overlay" onClick={() => setIsModalOpen_youtube(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-image-box">
               <img src="/youtubeVR.jpg" alt="Youtube VR" className="modal-image" />
@@ -82,7 +82,7 @@ function AppShowcase() {
             
             <div className="modal-info-box">
 
-              <button className="modal-close-btn" onClick={() => setisModalOpen_youtube(false)}>
+              <button className="modal-close-btn" onClick={() => setIsModalOpen_youtube(false)}>
                 ✕
               </button>
 

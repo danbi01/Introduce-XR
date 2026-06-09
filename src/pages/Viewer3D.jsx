@@ -4,7 +4,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 
 
 function QuestModel() {
-  const { scene } = useGLTF('/scene.glb');
+  const { scene } = useGLTF('/assets/scene.glb');
   return <primitive object={scene} scale={7} position={[0, 0.2, 0]} />;
 }
 
@@ -49,16 +49,16 @@ function Viewer3D() {
 
           <div className="purchase-left">
             <img
-              src={selectedModel === 'Quest 3S' ? '/meta3s.webp' : '/meta.webp'}
+              src={selectedModel === 'Quest 3S' ? '/assets/meta3s.webp' : '/assets/meta.webp'}
               alt="메인 기기"
               className="purchase-main-img"
               style={{ padding: selectedModel === 'Quest 3S' ? '43px' : '0px' }}
             />
 
             <div className="purchase-thumbs">
-              <img src="/controller.webp" alt="컨트롤러" />
-              <img src="/meta2.webp" alt="측면1" />
-              <img src="/meta3.webp" alt="측면2" />
+              <img src="./assets/controller.webp" alt="컨트롤러" />
+              <img src="./assets/meta2.webp" alt="측면1" />
+              <img src="./assets/meta3.webp" alt="측면2" />
             </div>
           </div>
 

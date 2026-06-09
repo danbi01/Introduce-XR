@@ -64,7 +64,7 @@ function Home() {
         <p style={{ fontSize: '24px', color: '#1d1d1f', marginBottom: '30px' }}>지금껏 본 적 없는 새로운 경험, XR의 세계에 초대합니다!</p>
         <div style={{ textAlign: 'center', backgroundColor: '#0f0f1a' }}>
           <img
-            src="/MainImage.png" alt="XR 기술 소개"
+            src="./assets/MainImage.png" alt="XR 기술 소개"
             style={{
               width: '100%',
               height: '100%',

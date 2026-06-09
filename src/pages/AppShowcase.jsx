@@ -5,9 +5,9 @@ function AppShowcase() {
   const [isModalOpen_youtube, setIsModalOpen_youtube] = useState(false);
 
   const bottomApps = [
-    { name: "VRChat", desc: "무한한 가능성의 공간을 상상해 보세요.", image: "/VRChat.webp" },
-    { name: "Roblox", desc: "수백만 가지의 경험" , image: "/roblox.webp" },
-    { name: "Instagram", desc: "Instagram에 소중한 순간을 공유해보세요.", image: "/instagram.webp" }
+    { name: "VRChat", desc: "무한한 가능성의 공간을 상상해 보세요.", image: "/assets/VRChat.webp" },
+    { name: "Roblox", desc: "수백만 가지의 경험" , image: "/assets/roblox.webp" },
+    { name: "Instagram", desc: "Instagram에 소중한 순간을 공유해보세요.", image: "/assets/instagram.webp" }
   ];
 
   return (
@@ -20,7 +20,7 @@ function AppShowcase() {
               <h2 className="app-title">Youtube VR</h2>
               <p className="app-desc">전과 다른 YouTube 세상</p>
               <div className="image-container yt-placeholder">
-                <img src="/youtubeVR.jpg" alt="Youtube VR" className="app-image" />
+                <img src="./assets/youtubevr.jpg" alt="Youtube VR" className="app-image" />
               </div>
             </div>
 
@@ -30,7 +30,7 @@ function AppShowcase() {
               <h2 className="app-title">Beat Saber</h2>
               <p className="app-desc">리듬에 맞춰 비트를 베는 VR 게임</p>
               <div className="image-container bs-placeholder">
-                <img src="/beatSaber.webp" alt="Beat Saber" className="app-image" />
+                <img src="./assets/beatSaber.webp" alt="Beat Saber" className="app-image" />
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ function AppShowcase() {
         <div className="modal-overlay" onClick={() => setIsModalOpen_beat(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-image-box">
-              <img src="/beatSaber.webp" alt="Beat Saber" className="modal-image" />
+              <img src="./assets/beatSaber.webp" alt="Beat Saber" className="modal-image" />
             </div>
             
             <div className="modal-info-box">
@@ -77,7 +77,7 @@ function AppShowcase() {
         <div className="modal-overlay" onClick={() => setIsModalOpen_youtube(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-image-box">
-              <img src="/youtubeVR.jpg" alt="Youtube VR" className="modal-image" />
+              <img src="./assets/youtubevr.jpg" alt="Youtube VR" className="modal-image" />
             </div>
             
             <div className="modal-info-box">
